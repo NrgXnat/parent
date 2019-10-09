@@ -15,7 +15,7 @@
 
     <groupId>org.nrg</groupId>
     <artifactId>parent</artifactId>
-    <version>1.8.0-eventservice-SNAPSHOT</version>
+    <version>1.7.6-rsnademo-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>NRG Parent POM</name>
@@ -71,7 +71,7 @@
         <xnat-tasks.version>${xnat.version}</xnat-tasks.version>
         <xnat-data-builder.version>${xnat.version}</xnat-data-builder.version>
         <spawner.version>${xnat.version}</spawner.version>
-        <xnat-data-models.version>${xnatdev.version}</xnat-data-models.version>
+        <xnat-data-models.version>${xnat.version}</xnat-data-models.version>
         <xdat-data-builder.version>${xnat.version}</xdat-data-builder.version>
         <xdat.version>${project.version}</xdat.version>
         <nrg.automation.version>${xnatdev.version}</nrg.automation.version>
