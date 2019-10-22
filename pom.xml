@@ -69,7 +69,7 @@
         <xnat-web.version>${project.version}</xnat-web.version>
         <xams.version>1.0-SNAPSHOT</xams.version>
         <xnat-tasks.version>${xnat.version}</xnat-tasks.version>
-        <xnat-data-builder.version>${xnat.version}</xnat-data-builder.version>
+        <xnat-data-builder.version>${project.version}</xnat-data-builder.version>
         <spawner.version>${xnat.version}</spawner.version>
         <xnat-data-models.version>${project.version}</xnat-data-models.version>
         <xdat-data-builder.version>${xnat.version}</xdat-data-builder.version>
