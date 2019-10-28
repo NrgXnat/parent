@@ -99,13 +99,13 @@
         <pipelinedev.version>${xnat.version}</pipelinedev.version>
         <data-client.version>1.7.2</data-client.version>
 
-        <spring-framework.version>4.3.24.RELEASE</spring-framework.version>
+        <spring-framework.version>4.3.25.RELEASE</spring-framework.version>
         <spring-security.version>4.2.13.RELEASE</spring-security.version>
         <spring-ldap.version>2.3.2.RELEASE</spring-ldap.version>
         <spring-oauth2.version>2.3.6.RELEASE</spring-oauth2.version>
         <spring-jwt.version>1.0.10.RELEASE</spring-jwt.version>
 
-        <swagger.version>2.7.0</swagger.version>
+        <swagger.version>2.9.2</swagger.version>
         <native-json.version>0.5</native-json.version>
 
         <activemq.version>5.7.0</activemq.version>
