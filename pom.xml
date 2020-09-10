@@ -13,7 +13,7 @@
 
     <groupId>org.nrg</groupId>
     <artifactId>parent</artifactId>
-    <version>1.8.0-SNAPSHOT</version>
+    <version>1.8.0-XAPI-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>NRG Parent POM</name>
@@ -72,7 +72,7 @@
         <spawner.version>${xnat.version}</spawner.version>
         <xnat-data-models.version>${xnatdev.version}</xnat-data-models.version>
         <xdat-data-builder.version>${xnatdev.version}</xdat-data-builder.version>
-        <xdat.version>${xnatdev.version}</xdat.version>
+        <xdat.version>${version}</xdat.version>
 
         <nrg.automation.version>${xnat.version}</nrg.automation.version>
         <nrg.config.version>${xnat.version}</nrg.config.version>
