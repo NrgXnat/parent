@@ -13,7 +13,7 @@
 
     <groupId>org.nrg</groupId>
     <artifactId>parent</artifactId>
-    <version>1.8.0-TIP-RC1</version>
+    <version>1.8.0-TIP-RC2</version>
     <packaging>pom</packaging>
 
     <name>NRG Parent POM</name>
@@ -65,16 +65,17 @@
         <xnat-ref.version>1.7.7-INTERNAL</xnat-ref.version>
         <xnat.version>1.8.0</xnat.version>
         <xnatdev.version>1.8.0-SNAPSHOT</xnatdev.version>
-        <xnat-rc.version>1.8.0-TIP-RC1</xnat-rc.version>
+        <xnat-rc1.version>1.8.0-TIP-RC1</xnat-rc1.version>
+        <xnat-rc2.version>1.8.0-TIP-RC2</xnat-rc2.version>
 
         <!-- XNAT core library versions -->
-        <xnat-web.version>${xnat-rc.version}</xnat-web.version>
+        <xnat-web.version>${xnat-rc2.version}</xnat-web.version>
         <xnat-tasks.version>${xnat-ref.version}</xnat-tasks.version>
         <xnat-data-builder.version>${xnatdev.version}</xnat-data-builder.version>
         <spawner.version>${xnat.version}</spawner.version>
         <xnat-data-models.version>${xnat.version}</xnat-data-models.version>
         <xdat-data-builder.version>${xnatdev.version}</xdat-data-builder.version>
-        <xdat.version>${xnat-rc.version}</xdat.version>
+        <xdat.version>${xnat-rc1.version}</xdat.version>
 
         <nrg.automation.version>${xnat-ref.version}</nrg.automation.version>
         <nrg.config.version>${xnat-ref.version}</nrg.config.version>
@@ -103,9 +104,9 @@
         <data-client.version>${xnat-ref.version}</data-client.version>
     
         <!-- XNAT plugin versions -->
-        <ohif-viewer.version>3.0.0-SNAPSHOT</ohif-viewer.version>
-        <container-service.version>2.1.1-ML-SNAPSHOT</container-service.version>
-        <dqr.version>1.0.0-SNAPSHOT</dqr.version>
+        <ohif-viewer.version>3.0.0-TIP-RC1</ohif-viewer.version>
+        <container-service.version>3.0.0-TIP-RC1</container-service.version>
+        <dqr.version>1.0.0-TIP-RC2</dqr.version>
         <batch-launch.version>0.2.8-ML-SNAPSHOT</batch-launch.version>
         <clara.version>ML-BETA</clara.version>
         <datasets.version>1.0.0-SNAPSHOT</datasets.version>
@@ -1332,6 +1333,21 @@
             <dependency>
                 <groupId>com.fasterxml.jackson.datatype</groupId>
                 <artifactId>jackson-datatype-guava</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.module</groupId>
+                <artifactId>jackson-module-parameter-names</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.datatype</groupId>
+                <artifactId>jackson-datatype-jdk8</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.datatype</groupId>
+                <artifactId>jackson-datatype-jsr310</artifactId>
                 <version>${jackson.version}</version>
             </dependency>
             <dependency>
