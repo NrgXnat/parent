@@ -13,7 +13,7 @@
 
     <groupId>org.nrg</groupId>
     <artifactId>parent</artifactId>
-    <version>1.8.0-TIP-RC2</version>
+    <version>1.8.0-TIP-RC3</version>
     <packaging>pom</packaging>
 
     <name>NRG Parent POM</name>
@@ -67,9 +67,10 @@
         <xnatdev.version>1.8.0-SNAPSHOT</xnatdev.version>
         <xnat-rc1.version>1.8.0-TIP-RC1</xnat-rc1.version>
         <xnat-rc2.version>1.8.0-TIP-RC2</xnat-rc2.version>
+        <xnat-rc3.version>1.8.0-TIP-RC3</xnat-rc3.version>
 
         <!-- XNAT core library versions -->
-        <xnat-web.version>${xnat-rc2.version}</xnat-web.version>
+        <xnat-web.version>${xnat-rc3.version}</xnat-web.version>
         <xnat-tasks.version>${xnat-ref.version}</xnat-tasks.version>
         <xnat-data-builder.version>${xnatdev.version}</xnat-data-builder.version>
         <spawner.version>${xnat.version}</spawner.version>
