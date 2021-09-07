@@ -15,7 +15,7 @@
 
     <groupId>org.nrg</groupId>
     <artifactId>parent</artifactId>
-    <version>1.8.2-XAPI-SNAPSHOT</version>
+    <version>1.8.4-R2X-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>NRG Parent POM</name>
@@ -64,42 +64,41 @@
         <signing.keypass>keypass</signing.keypass>
         <signing.tsa>https://timestamp.digicert.com</signing.tsa>
 
-        <xnat.version>1.8.2-SNAPSHOT</xnat.version>
-        <xnat-rel.version>1.8.0.1</xnat-rel.version>
-        <xnatdev.version>1.8.2-SNAPSHOT</xnatdev.version>
-        <xnatdev-xapi.version>1.8.2-XAPI-SNAPSHOT</xnatdev-xapi.version>
+        <xnat.version>1.8.3</xnat.version>
+        <xnatdev.version>1.8.4-SNAPSHOT</xnatdev.version>
+        <xnatr2x.version>1.8.4-R2X-SNAPSHOT</xnatr2x.version>
 
         <!-- XNAT core library versions -->
-        <xnat-web.version>${xnatdev-xapi.version}</xnat-web.version>
+        <xnat-web.version>${xnatr2x.version}</xnat-web.version>
         <xnat-tasks.version>${xnat.version}</xnat-tasks.version>
         <xnat-data-builder.version>${xnat.version}</xnat-data-builder.version>
         <spawner.version>${xnat.version}</spawner.version>
-        <xnat-data-models.version>${xnatdev.version}</xnat-data-models.version>
-        <xdat-data-builder.version>${xnatdev.version}</xdat-data-builder.version>
-        <xdat.version>${xnatdev-xapi.version}</xdat.version>
+        <xnat-data-models.version>${xnat.version}</xnat-data-models.version>
+        <xdat-data-builder.version>${xnat.version}</xdat-data-builder.version>
+        <xdat.version>${xnatr2x.version}</xdat.version>
 
-        <nrg.automation.version>${xnat.version}</nrg.automation.version>
-        <nrg.config.version>${xnat.version}</nrg.config.version>
+        <nrg.automation.version>${xnatr2x.version}</nrg.automation.version>
+        <nrg.config.version>${xnatr2x.version}</nrg.config.version>
         <nrg.framework.version>${xnat.version}</nrg.framework.version>
         <nrg.mail.version>${xnat.version}</nrg.mail.version>
         <nrg.notify.version>${xnat.version}</nrg.notify.version>
         <nrg.prefs.version>${xnat.version}</nrg.prefs.version>
         <nrg.test.version>${xnat.version}</nrg.test.version>
         <nrg.transaction.version>${xnat.version}</nrg.transaction.version>
-        <nrg.mizer.version>1.2.1-SNAPSHOT</nrg.mizer.version>
-        <nrg.dicomtools.version>${xnatdev.version}</nrg.dicomtools.version>
+        <nrg.mizer.version>1.2.1</nrg.mizer.version>
+        <nrg.dicomtools.version>${xnat.version}</nrg.dicomtools.version>
         <nrg.dicomimageutils.version>${xnat.version}</nrg.dicomimageutils.version>
-        <nrg.dicom-edit4.version>1.1.0-SNAPSHOT</nrg.dicom-edit4.version>
-        <nrg.dicom-edit6.version>6.3.1-SNAPSHOT</nrg.dicom-edit6.version>
-        <nrg.dicom.pixeleditor.version>1.3.0-SNAPSHOT</nrg.dicom.pixeleditor.version>
-        <nrg.dicomdb.version>5.3.0-SNAPSHOT</nrg.dicomdb.version>
-        <nrg.dicom-xnat.version>${xnatdev.version}</nrg.dicom-xnat.version>
+        <nrg.dicom-edit4.version>1.1.0</nrg.dicom-edit4.version>
+        <nrg.dicom-edit6.version>6.3.1</nrg.dicom-edit6.version>
+        <nrg.dicom.pixeleditor.version>1.3.0</nrg.dicom.pixeleditor.version>
+        <nrg.dicomdb.version>5.3.0</nrg.dicomdb.version>
+        <nrg.dicom-xnat.version>${xnat.version}</nrg.dicom-xnat.version>
         <nrg.ecat4xnat.version>${xnat.version}</nrg.ecat4xnat.version>
-        <nrg.ecat.version>1.1.0-SNAPSHOT</nrg.ecat.version>
-        <nrg.extattr.version>4.3.0-SNAPSHOT</nrg.extattr.version>
-        <nrg.prearcimporter.version>${xnatdev.version}</nrg.prearcimporter.version>
-        <nrg.sessionbuilders.version>${xnatdev.version}</nrg.sessionbuilders.version>
-        <nrg.plexiviewer.version>${xnatdev.version}</nrg.plexiviewer.version>
+        <nrg.ecat.version>1.1.0</nrg.ecat.version>
+        <nrg.extattr.version>4.3.1</nrg.extattr.version>
+        <nrg.prearcimporter.version>${xnat.version}</nrg.prearcimporter.version>
+        <nrg.sessionbuilders.version>${xnat.version}</nrg.sessionbuilders.version>
+        <nrg.plexiviewer.version>${xnat.version}</nrg.plexiviewer.version>
         <pipeline.version>${xnat.version}</pipeline.version>
         <pipelinedev.version>${xnat.version}</pipelinedev.version>
         <data-client.version>${xnat.version}</data-client.version>
@@ -267,7 +266,7 @@
         <gradle-cargo.version>2.7.1</gradle-cargo.version>
         <gradle-dependency-management.version>1.0.9.RELEASE</gradle-dependency-management.version>
         <gradle-lombok.version>4.0.0</gradle-lombok.version>
-        <tomcat-embed.version>7.0.105</tomcat-embed.version>
+        <tomcat-embed.version>8.5.64</tomcat-embed.version>
 
         <!-- Maven plugin versions -->
         <install4j-maven-plugin.version>1.1.2</install4j-maven-plugin.version>
@@ -2431,28 +2430,6 @@
     </build>
 
     <repositories>
-        <repository>
-            <id>dcm4che</id>
-            <name>dcm4che</name>
-            <url>https://www.dcm4che.org/maven2</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>jcenter</id>
-            <name>JCenter</name>
-            <url>https://jcenter.bintray.com</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
         <repository>
             <id>org.nrg.maven.artifacts.release</id>
             <name>XNAT Release Maven Repo</name>
