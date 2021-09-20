@@ -217,7 +217,7 @@
         <hamcrest2.version>2.2</hamcrest2.version>
         <assertj.version>3.16.1</assertj.version>
         <junit.version>4.12</junit.version>
-        <junit-jupiter.version>5.6.3</junit-jupiter.version>
+        <junit-jupiter.version>5.8.0</junit-jupiter.version>
         <spring-test-junit5.version>1.5.0</spring-test-junit5.version>
         <jacoco.version>0.8.5</jacoco.version>
         <jython.version>2.7.1</jython.version>
@@ -2055,6 +2055,12 @@
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter-engine</artifactId>
+                <version>${junit-jupiter.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.junit.vintage</groupId>
+                <artifactId>junit-vintage-engine</artifactId>
                 <version>${junit-jupiter.version}</version>
                 <scope>test</scope>
             </dependency>
