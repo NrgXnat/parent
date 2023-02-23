@@ -15,7 +15,7 @@
 
     <groupId>org.nrg</groupId>
     <artifactId>parent</artifactId>
-    <version>1.8.9-SNAPSHOT</version>
+    <version>1.8.9-CACHING-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>NRG Parent POM</name>
@@ -65,22 +65,23 @@
         <signing.tsa>https://timestamp.digicert.com</signing.tsa>
 
         <xnat.version>1.8.9-SNAPSHOT</xnat.version>
+        <xnatdev.version>1.8.9-CACHING-SNAPSHOT</xnatdev.version>
 
         <!-- XNAT core library versions -->
-        <xnat-web.version>${xnat.version}</xnat-web.version>
+        <xnat-web.version>${xnatdev.version}</xnat-web.version>
         <xnat-tasks.version>${xnat.version}</xnat-tasks.version>
         <xnat-data-builder.version>${xnat.version}</xnat-data-builder.version>
         <spawner.version>${xnat.version}</spawner.version>
-        <xnat-data-models.version>${xnat.version}</xnat-data-models.version>
+        <xnat-data-models.version>${xnatdev.version}</xnat-data-models.version>
         <xdat-data-builder.version>${xnat.version}</xdat-data-builder.version>
-        <xdat.version>${xnat.version}</xdat.version>
+        <xdat.version>${xnatdev.version}</xdat.version>
 
-        <nrg.automation.version>${xnat.version}</nrg.automation.version>
-        <nrg.config.version>${xnat.version}</nrg.config.version>
-        <nrg.framework.version>${xnat.version}</nrg.framework.version>
+        <nrg.automation.version>${xnatdev.version}</nrg.automation.version>
+        <nrg.config.version>${xnatdev.version}</nrg.config.version>
+        <nrg.framework.version>${xnatdev.version}</nrg.framework.version>
         <nrg.mail.version>${xnat.version}</nrg.mail.version>
         <nrg.notify.version>${xnat.version}</nrg.notify.version>
-        <nrg.prefs.version>${xnat.version}</nrg.prefs.version>
+        <nrg.prefs.version>${xnatdev.version}</nrg.prefs.version>
         <nrg.test.version>${xnat.version}</nrg.test.version>
         <nrg.transaction.version>${xnat.version}</nrg.transaction.version>
         <nrg.mizer.version>1.2.5-SNAPSHOT</nrg.mizer.version>
@@ -160,7 +161,7 @@
         <pixelmed-imageio.version>20200328</pixelmed-imageio.version>
         <dom4j.version>1.6.1</dom4j.version>
         <ecs.version>1.4.2</ecs.version>
-        <ehcache.version>2.6.11</ehcache.version>
+        <ehcache.version>2.10.9.2</ehcache.version>
         <fastmd5.version>2.7.1</fastmd5.version>
         <fest-swing.version>1.2.1</fest-swing.version>
         <lorem.version>2.1</lorem.version>
@@ -189,8 +190,8 @@
         <itext.version>2.1.7</itext.version>
         <jackson.version>2.13.3</jackson.version>
         <java-uuid-generator.version>3.1.4</java-uuid-generator.version>
-        <lombok.version>1.18.22</lombok.version>
-        <lombok.checksum>ecef1581411d7a82cc04281667ee0bac5d7c0a5aae74cfc38430396c91c31831</lombok.checksum>
+        <lombok.version>1.18.26</lombok.version>
+        <lombok.checksum>1ea5ad6c6afcff902d75072b2aaa6695585aebee9f12127e15c0036ba95d2918</lombok.checksum>
 
         <jargon.version>1.4.25</jargon.version>
         <java-getopt.version>1.0.13</java-getopt.version>
@@ -245,7 +246,7 @@
         <slf4j.version>1.7.30</slf4j.version>
         <logback.version>1.2.3</logback.version>
         <logstash.version>5.3</logstash.version>
-        <javamelody.version>1.90.0</javamelody.version>
+        <javamelody.version>1.91.0</javamelody.version>
         <findbugs-jsr305.version>3.0.2</findbugs-jsr305.version>
         <metainf-services.version>1.8</metainf-services.version>
         <jetbrains-annotations.version>17.0.0</jetbrains-annotations.version>
@@ -803,6 +804,12 @@
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-ehcache</artifactId>
                 <version>${hibernate.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>net.sf.ehcache</groupId>
+                        <artifactId>ehcache-core</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>com.vladmihalcea</groupId>
@@ -811,7 +818,7 @@
             </dependency>
             <dependency>
                 <groupId>net.sf.ehcache</groupId>
-                <artifactId>ehcache-core</artifactId>
+                <artifactId>ehcache</artifactId>
                 <version>${ehcache.version}</version>
             </dependency>
             <dependency>
