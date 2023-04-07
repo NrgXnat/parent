@@ -162,6 +162,8 @@
         <dom4j.version>1.6.1</dom4j.version>
         <ecs.version>1.4.2</ecs.version>
         <ehcache.version>2.10.9.2</ehcache.version>
+        <ehcache3.version>3.10.8</ehcache3.version>
+        <javax-cache-api.version>1.1.1</javax-cache-api.version>
         <fastmd5.version>2.7.1</fastmd5.version>
         <fest-swing.version>1.2.1</fest-swing.version>
         <lorem.version>2.1</lorem.version>
@@ -175,13 +177,12 @@
         <eclipse-jgit.version>4.5.4.201711221230-r</eclipse-jgit.version>
 
         <!-- Eventually upgrade to these versions. Staying with more moderate version in xnat_builder_1_7dev -->
-        <!-- hibernate.version>5.0.3.Final</hibernate.version>
-        <hibernate-commons.version>5.0.0.Final</hibernate-commons.version>
-        <hibernate-validator.version>5.2.2.Final</hibernate-validator.version -->
-        <hibernate-commons.version>4.0.5.Final</hibernate-commons.version>
+        <hibernate.version>5.6.15.Final</hibernate.version>
+        <hibernate-validator6.version>6.2.5.Final</hibernate-validator6.version>
+        <hibernate-commons.version>5.1.2.Final</hibernate-commons.version>
         <hibernate-jpa-2.1.version>1.0.2.Final</hibernate-jpa-2.1.version>
         <hibernate-validator.version>4.3.2.Final</hibernate-validator.version>
-        <hibernate.version>4.3.11.Final</hibernate.version>
+        <!-- hibernate.version>4.3.11.Final</hibernate.version-->
         <httpcomponents-client.version>4.5.13</httpcomponents-client.version>
         <httpcomponents-core.version>4.4.6</httpcomponents-core.version>
         <httpcomponents-mime.version>4.5.14</httpcomponents-mime.version>
@@ -235,7 +236,7 @@
         <wiremock.version>2.21.0</wiremock.version>
         <nifti_io.version>1.0</nifti_io.version>
         <org.apache.regexp.version>1.5.0</org.apache.regexp.version>
-        <org.postgresql.version>42.2.10</org.postgresql.version>
+        <org.postgresql.version>42.6.0</org.postgresql.version>
         <datasource-proxy.version>1.6</datasource-proxy.version>
         <log4jdbc.version>0.2.0</log4jdbc.version>
         <quartz.version>2.2.1</quartz.version>
@@ -286,7 +287,9 @@
         <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
         <maven-shade-plugin.version>3.2.4</maven-shade-plugin.version>
         <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
-        <maven-surefire-plugin.version>2.22.1</maven-surefire-plugin.version>
+        <maven-surefire-plugin.version>3.0.0</maven-surefire-plugin.version>
+        <maven-surefire-report-plugin.version>3.0.0</maven-surefire-report-plugin.version>
+        <maven-jxr-plugin.version>3.3.0</maven-jxr-plugin.version>
         <maven-war-plugin.version>3.3.1</maven-war-plugin.version>
         <javadoc-coverage.version>1.1.1</javadoc-coverage.version>
 
@@ -796,6 +799,11 @@
                 <version>${hibernate-validator.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.hibernate.validator</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>${hibernate-validator6.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.hibernate.common</groupId>
                 <artifactId>hibernate-commons-annotations</artifactId>
                 <version>${hibernate-commons.version}</version>
@@ -812,14 +820,40 @@
                 </exclusions>
             </dependency>
             <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-jcache</artifactId>
+                <version>${hibernate.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>com.vladmihalcea</groupId>
                 <artifactId>hibernate-types-43</artifactId>
+                <version>${vladmihalcea-hibernate-types.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.vladmihalcea</groupId>
+                <artifactId>hibernate-types-55</artifactId>
                 <version>${vladmihalcea-hibernate-types.version}</version>
             </dependency>
             <dependency>
                 <groupId>net.sf.ehcache</groupId>
                 <artifactId>ehcache</artifactId>
                 <version>${ehcache.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ehcache</groupId>
+                <artifactId>ehcache</artifactId>
+                <version>${ehcache3.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.glassfish.jaxb</groupId>
+                        <artifactId>jaxb-runtime</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>javax.cache</groupId>
+                <artifactId>cache-api</artifactId>
+                <version>${javax-cache-api.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.jena</groupId>
@@ -1401,6 +1435,11 @@
             <dependency>
                 <groupId>com.fasterxml.jackson.datatype</groupId>
                 <artifactId>jackson-datatype-hibernate4</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.datatype</groupId>
+                <artifactId>jackson-datatype-hibernate5</artifactId>
                 <version>${jackson.version}</version>
             </dependency>
             <dependency>
@@ -2332,6 +2371,25 @@
                             <exclude>**/Mock*.java</exclude>
                         </excludes>
                     </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-report-plugin</artifactId>
+                    <version>${maven-surefire-report-plugin.version}</version>
+                    <executions>
+                        <execution>
+                            <id>report</id>
+                            <phase>prepare-package</phase>
+                            <goals>
+                                <goal>report</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jxr-plugin</artifactId>
+                    <version>${maven-jxr-plugin.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
