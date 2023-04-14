@@ -163,7 +163,6 @@
         <ecs.version>1.4.2</ecs.version>
         <ehcache.version>2.10.9.2</ehcache.version>
         <ehcache3.version>3.10.8</ehcache3.version>
-        <javax-cache-api.version>1.1.1</javax-cache-api.version>
         <fastmd5.version>2.7.1</fastmd5.version>
         <fest-swing.version>1.2.1</fest-swing.version>
         <lorem.version>2.1</lorem.version>
@@ -178,11 +177,9 @@
 
         <!-- Eventually upgrade to these versions. Staying with more moderate version in xnat_builder_1_7dev -->
         <hibernate.version>5.6.15.Final</hibernate.version>
-        <hibernate-validator6.version>6.2.5.Final</hibernate-validator6.version>
+        <hibernate-validator.version>5.4.3.Final</hibernate-validator.version>
         <hibernate-commons.version>5.1.2.Final</hibernate-commons.version>
         <hibernate-jpa-2.1.version>1.0.2.Final</hibernate-jpa-2.1.version>
-        <hibernate-validator.version>4.3.2.Final</hibernate-validator.version>
-        <!-- hibernate.version>4.3.11.Final</hibernate.version-->
         <httpcomponents-client.version>4.5.13</httpcomponents-client.version>
         <httpcomponents-core.version>4.4.6</httpcomponents-core.version>
         <httpcomponents-mime.version>4.5.14</httpcomponents-mime.version>
@@ -194,17 +191,25 @@
         <lombok.version>1.18.26</lombok.version>
         <lombok.checksum>1ea5ad6c6afcff902d75072b2aaa6695585aebee9f12127e15c0036ba95d2918</lombok.checksum>
 
-        <jargon.version>1.4.25</jargon.version>
-        <java-getopt.version>1.0.13</java-getopt.version>
-        <javassist.version>3.24.0-GA</javassist.version>
+        <!-- Java extension package versions -->
         <javax-activation.version>1.1.1</javax-activation.version>
         <javax-annotation.version>1.3.2</javax-annotation.version>
+        <javax-cache-api.version>1.1.1</javax-cache-api.version>
+        <javax-el.version>2.2.5</javax-el.version>
         <javax-inject.version>1</javax-inject.version>
         <javax-interceptor.version>1.2.2</javax-interceptor.version>
         <javax-j2ee-api.version>1.1.1</javax-j2ee-api.version>
         <javax-jms-api.version>2.0.1</javax-jms-api.version>
         <javax-mail.version>1.5.6</javax-mail.version>
-        <javax-validation.version>2.0.1.Final</javax-validation.version>
+
+        <!-- Jakarta EE package versions -->
+        <jakarta-el.version>4.0.2</jakarta-el.version>
+
+        <glassfish-javax-el.version>3.0.1-b12</glassfish-javax-el.version>
+        <glassfish-jakarta-el.version>4.0.2</glassfish-jakarta-el.version>
+        <jargon.version>1.4.25</jargon.version>
+        <java-getopt.version>1.0.13</java-getopt.version>
+        <javassist.version>3.24.0-GA</javassist.version>
         <jcalendar.version>1.4</jcalendar.version>
         <jcs.version>1.3</jcs.version>
         <jena-tdb.version>1.0.1</jena-tdb.version>
@@ -217,7 +222,7 @@
         <jstl.version>1.2</jstl.version>
         <hamcrest.version>1.3</hamcrest.version>
         <hamcrest2.version>2.2</hamcrest2.version>
-        <assertj.version>3.16.1</assertj.version>
+        <assertj.version>3.24.2</assertj.version>
         <junit.version>4.12</junit.version>
         <junit-jupiter.version>5.8.1</junit-jupiter.version>
         <spring-test-junit5.version>1.5.0</spring-test-junit5.version>
@@ -240,12 +245,12 @@
         <datasource-proxy.version>1.6</datasource-proxy.version>
         <log4jdbc.version>0.2.0</log4jdbc.version>
         <quartz.version>2.2.1</quartz.version>
-        <reflections.version>0.9.11</reflections.version>
+        <reflections.version>0.10.2</reflections.version>
         <restlet.version>1.1.10</restlet.version>
         <saxon.version>9.1.0.8</saxon.version>
         <servlet-api.version>3.1.0</servlet-api.version>
         <slf4j.version>1.7.30</slf4j.version>
-        <logback.version>1.2.3</logback.version>
+        <logback.version>1.2.12</logback.version>
         <logstash.version>5.3</logstash.version>
         <javamelody.version>1.91.0</javamelody.version>
         <findbugs-jsr305.version>3.0.2</findbugs-jsr305.version>
@@ -799,9 +804,19 @@
                 <version>${hibernate-validator.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.hibernate.validator</groupId>
-                <artifactId>hibernate-validator</artifactId>
-                <version>${hibernate-validator6.version}</version>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-validator-cdi</artifactId>
+                <version>${hibernate-validator.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.glassfish</groupId>
+                <artifactId>javax.el</artifactId>
+                <version>${glassfish-javax-el.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.glassfish</groupId>
+                <artifactId>jakarta.el</artifactId>
+                <version>${glassfish-jakarta-el.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.hibernate.common</groupId>
@@ -1899,6 +1914,11 @@
                 <version>${javax-annotation.version}</version>
             </dependency>
             <dependency>
+                <groupId>javax.el</groupId>
+                <artifactId>javax.el-api</artifactId>
+                <version>${javax-el.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>javax.inject</groupId>
                 <artifactId>javax.inject</artifactId>
                 <version>${javax-inject.version}</version>
@@ -1932,11 +1952,6 @@
                 <groupId>javax.servlet</groupId>
                 <artifactId>jstl</artifactId>
                 <version>${jstl.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>javax.validation</groupId>
-                <artifactId>validation-api</artifactId>
-                <version>${javax-validation.version}</version>
             </dependency>
             <dependency>
                 <groupId>javax.xml</groupId>
@@ -2378,12 +2393,18 @@
                     <version>${maven-surefire-report-plugin.version}</version>
                     <executions>
                         <execution>
+                            <phase>test</phase>
+                            <goals>
+                                <goal>report-only</goal>
+                            </goals>
+                        </execution>
+                        <!-- execution>
                             <id>report</id>
                             <phase>prepare-package</phase>
                             <goals>
                                 <goal>report</goal>
                             </goals>
-                        </execution>
+                        </execution -->
                     </executions>
                 </plugin>
                 <plugin>
