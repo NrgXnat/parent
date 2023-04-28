@@ -82,8 +82,8 @@
         <nrg.mail.version>${xnat.version}</nrg.mail.version>
         <nrg.notify.version>${xnat.version}</nrg.notify.version>
         <nrg.prefs.version>${xnatdev.version}</nrg.prefs.version>
-        <nrg.test.version>${xnat.version}</nrg.test.version>
-        <nrg.transaction.version>${xnat.version}</nrg.transaction.version>
+        <nrg.test.version>${xnatdev.version}</nrg.test.version>
+        <nrg.transaction.version>${xnatdev.version}</nrg.transaction.version>
         <nrg.mizer.version>1.2.5-SNAPSHOT</nrg.mizer.version>
         <nrg.dicomtools.version>${xnat.version}</nrg.dicomtools.version>
         <nrg.dicomimageutils.version>${xnat.version}</nrg.dicomimageutils.version>
@@ -161,8 +161,8 @@
         <pixelmed-imageio.version>20200328</pixelmed-imageio.version>
         <dom4j.version>1.6.1</dom4j.version>
         <ecs.version>1.4.2</ecs.version>
-        <ehcache.version>2.10.9.2</ehcache.version>
         <ehcache3.version>3.10.8</ehcache3.version>
+        <redisson.version>3.20.1</redisson.version>
         <fastmd5.version>2.7.1</fastmd5.version>
         <fest-swing.version>1.2.1</fest-swing.version>
         <lorem.version>2.1</lorem.version>
@@ -186,7 +186,9 @@
         <imagej.version>1.53c</imagej.version>
         <jai_imageio.version>1.1</jai_imageio.version>
         <itext.version>2.1.7</itext.version>
-        <jackson.version>2.13.3</jackson.version>
+        <jackson.version>2.13.5</jackson.version>
+        <!-- This version is important for configuring redisson -->
+        <snakeyaml.version>1.33</snakeyaml.version>
         <java-uuid-generator.version>3.1.4</java-uuid-generator.version>
         <lombok.version>1.18.26</lombok.version>
         <lombok.checksum>1ea5ad6c6afcff902d75072b2aaa6695585aebee9f12127e15c0036ba95d2918</lombok.checksum>
@@ -830,7 +832,7 @@
                 <exclusions>
                     <exclusion>
                         <groupId>net.sf.ehcache</groupId>
-                        <artifactId>ehcache-core</artifactId>
+                        <artifactId>ehcache</artifactId>
                     </exclusion>
                 </exclusions>
             </dependency>
@@ -850,11 +852,6 @@
                 <version>${vladmihalcea-hibernate-types.version}</version>
             </dependency>
             <dependency>
-                <groupId>net.sf.ehcache</groupId>
-                <artifactId>ehcache</artifactId>
-                <version>${ehcache.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>org.ehcache</groupId>
                 <artifactId>ehcache</artifactId>
                 <version>${ehcache3.version}</version>
@@ -864,6 +861,22 @@
                         <artifactId>jaxb-runtime</artifactId>
                     </exclusion>
                 </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.ehcache</groupId>
+                <artifactId>ehcache-clustered</artifactId>
+                <version>${ehcache3.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.glassfish.jaxb</groupId>
+                        <artifactId>jaxb-runtime</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson</artifactId>
+                <version>${redisson.version}</version>
             </dependency>
             <dependency>
                 <groupId>javax.cache</groupId>
@@ -1458,6 +1471,11 @@
                 <version>${jackson.version}</version>
             </dependency>
             <dependency>
+                <groupId>com.fasterxml.jackson.module</groupId>
+                <artifactId>jackson-module-jaxb-annotations</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>com.fasterxml.jackson.datatype</groupId>
                 <artifactId>jackson-datatype-guava</artifactId>
                 <version>${jackson.version}</version>
@@ -1481,6 +1499,11 @@
                 <groupId>com.fasterxml.uuid</groupId>
                 <artifactId>java-uuid-generator</artifactId>
                 <version>${java-uuid-generator.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.yaml</groupId>
+                <artifactId>snakeyaml</artifactId>
+                <version>${snakeyaml.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>
