@@ -172,8 +172,19 @@
         <guava.version>31.1-jre</guava.version>
         <gson.version>2.9.0</gson.version>
         <auto-value.version>1.7.4</auto-value.version>
-        <h2.version>1.4.200</h2.version>
         <eclipse-jgit.version>4.5.4.201711221230-r</eclipse-jgit.version>
+
+        <!-- Database driver versions -->
+        <!-- 
+            Caution: don't upgrade the postgresql version without verifying that we have a fix
+            for this: https://jdbc.postgresql.org/changelogs/2020-03-10-42.2.11-release/:
+            
+            * DatabaseMetaData#getProcedures returns only procedures (not functions) for PostgreSQL 11+ PR 1723
+
+            That causes new SimpleJdbcCall(getJdbcTemplate()).withFunctionName(function).executeFunction() to fail.
+        -->
+        <org.postgresql.version>42.2.10</org.postgresql.version>
+        <h2.version>1.4.200</h2.version>
 
         <!-- Eventually upgrade to these versions. Staying with more moderate version in xnat_builder_1_7dev -->
         <hibernate.version>5.6.15.Final</hibernate.version>
@@ -243,7 +254,6 @@
         <wiremock.version>2.21.0</wiremock.version>
         <nifti_io.version>1.0</nifti_io.version>
         <org.apache.regexp.version>1.5.0</org.apache.regexp.version>
-        <org.postgresql.version>42.6.0</org.postgresql.version>
         <datasource-proxy.version>1.6</datasource-proxy.version>
         <log4jdbc.version>0.2.0</log4jdbc.version>
         <quartz.version>2.2.1</quartz.version>
