@@ -71,7 +71,7 @@
         <xnat-web.version>${xnatdev.version}</xnat-web.version>
         <xnat-tasks.version>${xnat.version}</xnat-tasks.version>
         <xnat-data-builder.version>${xnat.version}</xnat-data-builder.version>
-        <spawner.version>${xnat.version}</spawner.version>
+        <spawner.version>${xnatdev.version}</spawner.version>
         <xnat-data-models.version>${xnatdev.version}</xnat-data-models.version>
         <xdat-data-builder.version>${xnat.version}</xdat-data-builder.version>
         <xdat.version>${xnatdev.version}</xdat.version>
@@ -80,7 +80,7 @@
         <nrg.config.version>${xnatdev.version}</nrg.config.version>
         <nrg.framework.version>${xnatdev.version}</nrg.framework.version>
         <nrg.mail.version>${xnat.version}</nrg.mail.version>
-        <nrg.notify.version>${xnat.version}</nrg.notify.version>
+        <nrg.notify.version>${xnatdev.version}</nrg.notify.version>
         <nrg.prefs.version>${xnatdev.version}</nrg.prefs.version>
         <nrg.test.version>${xnatdev.version}</nrg.test.version>
         <nrg.transaction.version>${xnatdev.version}</nrg.transaction.version>
@@ -90,7 +90,7 @@
         <nrg.dicom-edit4.version>1.1.0</nrg.dicom-edit4.version>
         <nrg.dicom-edit6.version>6.5.1-SNAPSHOT</nrg.dicom-edit6.version>
         <nrg.dicomdb.version>5.2</nrg.dicomdb.version>
-        <nrg.dicom-xnat.version>${xnat.version}</nrg.dicom-xnat.version>
+        <nrg.dicom-xnat.version>${xnatdev.version}</nrg.dicom-xnat.version>
         <nrg.ecat4xnat.version>${xnat.version}</nrg.ecat4xnat.version>
         <nrg.ecat.version>1.1.0</nrg.ecat.version>
         <nrg.extattr.version>4.3.1</nrg.extattr.version>
