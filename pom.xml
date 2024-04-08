@@ -15,7 +15,7 @@
 
     <groupId>org.nrg</groupId>
     <artifactId>parent</artifactId>
-    <version>1.8.10.1-RC2</version>
+    <version>1.8.10.1-RC3</version>
     <packaging>pom</packaging>
 
     <name>NRG Parent POM</name>
@@ -67,7 +67,7 @@
         <xnat.version>1.8.10</xnat.version>
 
         <!-- XNAT core library versions -->
-        <xnatfix1.version>1.8.10.1-RC2</xnatfix1.version>
+        <xnatfix1.version>1.8.10.1-RC3</xnatfix1.version>
         <xnat-web.version>${xnatfix1.version}</xnat-web.version>
         <xnat-tasks.version>${xnat.version}</xnat-tasks.version>
         <xnat-data-builder.version>${xnat.version}</xnat-data-builder.version>
@@ -88,7 +88,7 @@
         <nrg.dicomtools.version>${xnat.version}</nrg.dicomtools.version>
         <nrg.dicomimageutils.version>${xnat.version}</nrg.dicomimageutils.version>
         <nrg.dicom-edit4.version>${xnat.version}</nrg.dicom-edit4.version>
-        <nrg.dicom-edit6.version>6.7-RC2</nrg.dicom-edit6.version>
+        <nrg.dicom-edit6.version>6.6.1-RC1</nrg.dicom-edit6.version>
         <nrg.dicomdb.version>${xnat.version}</nrg.dicomdb.version>
         <nrg.dicom-xnat.version>${xnat.version}</nrg.dicom-xnat.version>
         <nrg.ecat4xnat.version>${xnat.version}</nrg.ecat4xnat.version>
