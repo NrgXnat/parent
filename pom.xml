@@ -95,10 +95,8 @@
         <nrg.extattr.version>${xnat.version}</nrg.extattr.version>
         <nrg.prearcimporter.version>${xnat.version}</nrg.prearcimporter.version>
         <nrg.sessionbuilders.version>${xnat.version}</nrg.sessionbuilders.version>
-        <nrg.plexiviewer.version>${xnat.version}</nrg.plexiviewer.version>
-        <pipeline.version>${xnat.version}</pipeline.version>
-        <pipelinedev.version>${xnat.version}</pipelinedev.version>
         <data-client.version>${xnat.version}</data-client.version>
+
 
         <!-- XNAT plugin versions -->
         <ohif-viewer.version>3.0.0</ohif-viewer.version>
@@ -127,7 +125,6 @@
         <aopalliance.version>1.0</aopalliance.version>
         <aspectj.version>1.8.10</aspectj.version>
         <avalon.version>4.3</avalon.version>
-        <axis.version>1.4</axis.version>
         <msv.version>2013.6.1</msv.version>
         <cglib.version>2.2.2</cglib.version>
         <commons-beanutils.version>1.9.4</commons-beanutils.version>
@@ -267,7 +264,6 @@
         <wizard.version>1.2.1</wizard.version>
         <xalan.version>2.7.2</xalan.version>
         <xbean.version>3.17</xbean.version>
-        <xmlbeans.version>2.6.0</xmlbeans.version>
         <jayway.version>2.8.0</jayway.version>
 
         <!-- Gradle plugin versions -->
@@ -497,119 +493,12 @@
                 <version>${data-client.version}</version>
             </dependency>
 
-            <!-- PlexiViewer dependency definitions -->
-            <dependency>
-                <groupId>org.nrg.xnat</groupId>
-                <artifactId>plexiviewer</artifactId>
-                <version>${nrg.plexiviewer.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>*</groupId>
-                        <artifactId>*</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
 
             <!-- XImgView dependency definitions -->
             <dependency>
                 <groupId>org.nrg.xnatx.plugins</groupId>
                 <artifactId>ximgview-plugin</artifactId>
                 <version>1.0.2</version>
-            </dependency>
-
-            <!-- Pipeline dependency definitions -->
-            <dependency>
-                <groupId>org.nrg</groupId>
-                <artifactId>pipelineBase</artifactId>
-                <version>1.0</version>
-            </dependency>
-            <dependency>
-                <groupId>org.nrg</groupId>
-                <artifactId>pipelineBuild</artifactId>
-                <version>1.0</version>
-            </dependency>
-            <dependency>
-                <groupId>org.nrg</groupId>
-                <artifactId>pipelineWorkflow</artifactId>
-                <version>1.0</version>
-            </dependency>
-            <dependency>
-                <groupId>org.nrg.xnat.pipeline</groupId>
-                <artifactId>xnat_pipeline</artifactId>
-                <version>${xnat.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.nrg.xnat.pipeline</groupId>
-                <artifactId>xnat_tools</artifactId>
-                <version>${xnat.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.nrg.xnat.pipeline</groupId>
-                <artifactId>catalog</artifactId>
-                <version>${xnat.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.nrg.xnat.pipeline</groupId>
-                <artifactId>client</artifactId>
-                <version>${xnat.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.nrg.xnat.pipeline</groupId>
-                <artifactId>xnat-pipeline</artifactId>
-                <version>${xnat.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.nrg.xnat.pipeline</groupId>
-                <artifactId>xnat-tools</artifactId>
-                <version>${xnat.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.nrg.xnat.pipeline</groupId>
-                <artifactId>imagingtools</artifactId>
-                <version>${xnat.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.nrg.xnat.pipeline</groupId>
-                <artifactId>pipeline-client</artifactId>
-                <version>${xnat.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>javax.activation</groupId>
-                        <artifactId>activation</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
-                <groupId>org.nrg</groupId>
-                <artifactId>pipelineXNAT</artifactId>
-                <version>1.0</version>
-            </dependency>
-            <dependency>
-                <groupId>org.nrg.xnat.pipeline</groupId>
-                <artifactId>base</artifactId>
-                <version>1.0</version>
-            </dependency>
-            <dependency>
-                <groupId>org.nrg.xnat.pipeline</groupId>
-                <artifactId>build</artifactId>
-                <version>1.0</version>
-            </dependency>
-            <dependency>
-                <groupId>org.nrg.xnat.pipeline</groupId>
-                <artifactId>workflow</artifactId>
-                <version>1.0</version>
-            </dependency>
-
-            <!-- Pipeline dependency definitions -->
-            <dependency>
-                <groupId>org.nrg.xnat</groupId>
-                <artifactId>xnatsrb</artifactId>
-                <version>1.0.1</version>
-            </dependency>
-            <dependency>
-                <groupId>org.nrg.xnat</groupId>
-                <artifactId>xnatfs</artifactId>
-                <version>1.5.1</version>
             </dependency>
 
             <!-- Plugin definitions -->
@@ -1310,16 +1199,6 @@
                 <version>${xbean.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.apache.xmlbeans</groupId>
-                <artifactId>xmlbeans</artifactId>
-                <version>${xmlbeans.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.xmlbeans</groupId>
-                <artifactId>xmlbeans-xpath</artifactId>
-                <version>${xmlbeans.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>xalan</groupId>
                 <artifactId>xalan</artifactId>
                 <version>${xalan.version}</version>
@@ -1413,36 +1292,6 @@
                 <groupId>net.bull.javamelody</groupId>
                 <artifactId>javamelody-core</artifactId>
                 <version>${javamelody.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>axis</groupId>
-                <artifactId>axis</artifactId>
-                <version>${axis.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>axis</groupId>
-                <artifactId>axis-ant</artifactId>
-                <version>${axis.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>axis</groupId>
-                <artifactId>axis-schema</artifactId>
-                <version>1.3</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.axis</groupId>
-                <artifactId>axis</artifactId>
-                <version>${axis.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.axis</groupId>
-                <artifactId>axis-jaxrpc</artifactId>
-                <version>${axis.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.axis</groupId>
-                <artifactId>axis-saaj</artifactId>
-                <version>${axis.version}</version>
             </dependency>
             <dependency>
                 <groupId>net.java.dev.msv</groupId>
@@ -1911,11 +1760,6 @@
                         <artifactId>jmock</artifactId>
                     </exclusion>
                 </exclusions>
-            </dependency>
-            <dependency>
-                <groupId>org.dspace</groupId>
-                <artifactId>jargon</artifactId>
-                <version>${jargon.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.json</groupId>
