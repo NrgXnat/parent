@@ -15,7 +15,7 @@
 
     <groupId>org.nrg</groupId>
     <artifactId>parent</artifactId>
-    <version>1.9.0-RC-SNAPSHOT</version>
+    <version>1.9.0</version>
     <packaging>pom</packaging>
 
     <name>NRG Parent POM</name>
@@ -64,11 +64,10 @@
         <signing.keypass>keypass</signing.keypass>
         <signing.tsa>https://timestamp.digicert.com</signing.tsa>
 
-        <xnat.version>1.9.0-RC-SNAPSHOT</xnat.version>
+        <xnat.version>1.9.0</xnat.version>
 
         <!-- XNAT core library versions -->
-        <xnatfix1.version>1.8.10.1</xnatfix1.version>
-        <xnat-web.version>${xnatfix1.version}</xnat-web.version>
+        <xnat-web.version>${xnat.version}</xnat-web.version>
         <xnat-tasks.version>${xnat.version}</xnat-tasks.version>
         <xnat-data-builder.version>${xnat.version}</xnat-data-builder.version>
         <spawner.version>${xnat.version}</spawner.version>
@@ -84,7 +83,7 @@
         <nrg.prefs.version>${xnat.version}</nrg.prefs.version>
         <nrg.test.version>${xnat.version}</nrg.test.version>
         <nrg.transaction.version>${xnat.version}</nrg.transaction.version>
-        <nrg.mizer.version>${xnatfix1.version}</nrg.mizer.version>
+        <nrg.mizer.version>${xnat.version}</nrg.mizer.version>
         <nrg.dicomtools.version>${xnat.version}</nrg.dicomtools.version>
         <nrg.dicomimageutils.version>${xnat.version}</nrg.dicomimageutils.version>
         <nrg.dicom-edit4.version>${xnat.version}</nrg.dicom-edit4.version>
