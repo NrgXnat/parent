@@ -1795,11 +1795,12 @@
                 <version>${javax-activation.version}</version>
             </dependency>
             <dependency>
-                <groupId>jakarta.annotation</groupId>
-                <artifactId>jakarta.annotation-api</artifactId>
-                <version>1.3.5</version>
+                <groupId>javax.annotation</groupId>
+                <artifactId>javax.annotation-api</artifactId>
+                <version>${javax-annotation.version}</version>
             </dependency>
-<!--            <dependency>
+<!--        Will use when upgraded to Spring 6 see https://www.baeldung.com/spring-postconstruct-predestroy#javaxannotation-or-jakartaannotation
+            <dependency>
                 <groupId>jakarta.annotation</groupId>
                 <artifactId>jakarta.annotation-api</artifactId>
                 <version>${jakarta-annotation.version}</version>
@@ -2136,28 +2137,6 @@
                 <artifactId>json-path</artifactId>
                 <version>${jayway.version}</version>
             </dependency>
-            <!-- For JDK 21 -->
-            <dependency>
-                <groupId>jakarta.annotation</groupId>
-                <artifactId>jakarta.annotation-api</artifactId>
-                <version>1.3.5</version>
-            </dependency>
-            <!-- https://stackoverflow.com/questions/75936491/what-are-the-jaxb-jar-files-to-be-used-with-java-17-project
-            <dependency>
-                <groupId>javax.xml.bind</groupId>
-                <artifactId>jaxb-api</artifactId>
-                <version>2.3.1</version>
-            </dependency>
-            <dependency>
-                <groupId>com.sun.xml.bind</groupId>
-                <artifactId>jaxb-impl</artifactId>
-                <version>4.0.5</version>
-            </dependency>
-            <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
-                <artifactId>jaxb-runtime</artifactId>
-                <version>4.0.0</version>
-            </dependency> -->
         </dependencies>
     </dependencyManagement>
 
@@ -2203,6 +2182,9 @@
                     <version>${maven-compiler-plugin.version}</version>
                     <configuration>
                         <release>21</release>
+                        <compilerArgs>
+                            <arg>-proc:full</arg>
+                        </compilerArgs>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -2492,7 +2474,6 @@
             </plugins>
         </pluginManagement>
     </build>
-
     <repositories>
         <repository>
             <id>org.nrg.maven.artifacts.release</id>
