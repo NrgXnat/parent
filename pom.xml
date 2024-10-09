@@ -64,7 +64,7 @@
         <signing.keypass>keypass</signing.keypass>
         <signing.tsa>https://timestamp.digicert.com</signing.tsa>
 
-        <xnat.version>1.9.1-SNAPSHOT</xnat.version>
+        <xnat.version>1.10.0-SNAPSHOT</xnat.version>
 
         <!-- XNAT core library versions -->
         <xnat-web.version>${xnat.version}</xnat-web.version>
@@ -87,7 +87,7 @@
         <nrg.dicomtools.version>${xnat.version}</nrg.dicomtools.version>
         <nrg.dicomimageutils.version>${xnat.version}</nrg.dicomimageutils.version>
         <nrg.dicom-edit4.version>${xnat.version}</nrg.dicom-edit4.version>
-        <nrg.dicom-edit6.version>6.8.0-SNAPSHOT</nrg.dicom-edit6.version>
+        <nrg.dicom-edit6.version>7.0.0-SNAPSHOT</nrg.dicom-edit6.version>
         <nrg.dicomdb.version>${xnat.version}</nrg.dicomdb.version>
         <nrg.dicom-xnat.version>${xnat.version}</nrg.dicom-xnat.version>
         <nrg.ecat4xnat.version>${xnat.version}</nrg.ecat4xnat.version>
@@ -119,7 +119,7 @@
         <activemq-protobuf.version>1.1</activemq-protobuf.version>
         <ant.version>1.9.8</ant.version>
         <antlr3.version>3.5.3</antlr3.version>
-        <antlr4.version>4.9.3</antlr4.version>
+        <antlr4.version>4.13.2</antlr4.version>
         <hsqldb.version>2.3.6</hsqldb.version>
         <hikaricp.version>4.0.3</hikaricp.version>
         <aopalliance.version>1.0</aopalliance.version>
@@ -2294,6 +2294,7 @@
                             <exclude>**/Abstract*.java</exclude>
                             <exclude>**/Mock*.java</exclude>
                         </excludes>
+                        <argLine>-Xmx4096m</argLine>
                     </configuration>
                 </plugin>
                 <plugin>
