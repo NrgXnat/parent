@@ -51,7 +51,7 @@
         <application.name>${project.name}</application.name>
         <build.number>manual</build.number>
 
-        <java.source.version>1.8</java.source.version>
+        <java.source.version>21</java.source.version>
         <java.target.version>21</java.target.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -2083,13 +2083,13 @@
                 <version>${powermock.version}</version>
                 <scope>test</scope>
             </dependency>
-            <!-- Comes with mockito-core as per https://stackoverflow.com/questions/77234542/migration-from-java-8-to-java-17-and-spring-6-junit4-failing-due-to-version-mism
+            <!-- Comes with mockito-core as per https://stackoverflow.com/questions/77234542/migration-from-java-8-to-java-17-and-spring-6-junit4-failing-due-to-version-mism -->
             <dependency>
                 <groupId>org.powermock</groupId>
                 <artifactId>powermock-api-mockito2</artifactId>
                 <version>${powermock.version}</version>
                 <scope>test</scope>
-            </dependency> -->
+            </dependency>
             <dependency>
                 <groupId>easymock</groupId>
                 <artifactId>easymock</artifactId>
@@ -2263,7 +2263,7 @@
                             <goals>
                                 <goal>javadoc</goal>
                             </goals>
-                          <!--  <configuration>
+                           <!-- <configuration>
                                 <doclet>com.manoelcampos.javadoc.coverage.CoverageDoclet</doclet>
                                 <docletArtifact>
                                     <groupId>com.manoelcampos</groupId>
