@@ -272,7 +272,7 @@
         <gradle-cargo.version>2.8.0</gradle-cargo.version>
         <gradle-dependency-management.version>1.0.11.RELEASE</gradle-dependency-management.version>
         <gradle-lombok.version>5.0.0</gradle-lombok.version>
-        <tomcat-embed.version>9.0.54</tomcat-embed.version>
+        <tomcat-embed.version>11.0.0</tomcat-embed.version>
 
         <!-- Maven plugin versions -->
         <maven-assembly-plugin.version>3.6.0</maven-assembly-plugin.version>
