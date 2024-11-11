@@ -113,7 +113,7 @@
         <spring-jwt.version>1.1.1.RELEASE</spring-jwt.version>
         <bouncycastle.version>1.78.1</bouncycastle.version>
 
-        <swagger.version>2.9.2</swagger.version>
+        <swagger.version>2.10.0</swagger.version>
         <vladmihalcea-hibernate-types.version>2.14.0</vladmihalcea-hibernate-types.version>
 
         <activemq.version>5.16.7</activemq.version>
@@ -185,7 +185,7 @@
         <itext.version>2.1.7</itext.version>
         <jackson.version>2.13.5</jackson.version>
         <!-- This version is important for configuring redisson -->
-        <snakeyaml.version>1.33</snakeyaml.version>
+        <snakeyaml.version>2.0</snakeyaml.version>
         <java-uuid-generator.version>3.1.4</java-uuid-generator.version>
         <lombok.version>1.18.26</lombok.version>
         <lombok.checksum>1ea5ad6c6afcff902d75072b2aaa6695585aebee9f12127e15c0036ba95d2918</lombok.checksum>
