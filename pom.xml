@@ -113,7 +113,7 @@
         <spring-jwt.version>1.1.1.RELEASE</spring-jwt.version>
         <bouncycastle.version>1.78.1</bouncycastle.version>
 
-        <swagger.version>2.10.0</swagger.version>
+        <swagger.version>2.9.2</swagger.version>
         <vladmihalcea-hibernate-types.version>2.14.0</vladmihalcea-hibernate-types.version>
 
         <activemq.version>5.16.7</activemq.version>
@@ -170,7 +170,7 @@
         <eclipse-jgit.version>5.13.3.202401111512-r</eclipse-jgit.version>
 
         <org.postgresql.version>42.7.3</org.postgresql.version>
-        <h2.version>2.1.210</h2.version>
+        <h2.version>1.4.200</h2.version>
 
         <!-- Eventually upgrade to these versions. Staying with more moderate version in xnat_builder_1_7dev -->
         <hibernate.version>5.6.15.Final</hibernate.version>
@@ -185,7 +185,7 @@
         <itext.version>2.1.7</itext.version>
         <jackson.version>2.13.5</jackson.version>
         <!-- This version is important for configuring redisson -->
-        <snakeyaml.version>2.0</snakeyaml.version>
+        <snakeyaml.version>1.33</snakeyaml.version>
         <java-uuid-generator.version>3.1.4</java-uuid-generator.version>
         <lombok.version>1.18.26</lombok.version>
         <lombok.checksum>1ea5ad6c6afcff902d75072b2aaa6695585aebee9f12127e15c0036ba95d2918</lombok.checksum>
