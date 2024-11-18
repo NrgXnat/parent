@@ -15,7 +15,7 @@
 
     <groupId>org.nrg</groupId>
     <artifactId>parent</artifactId>
-    <version>1.9.0</version>
+    <version>1.9.1-RC-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>NRG Parent POM</name>
@@ -64,7 +64,7 @@
         <signing.keypass>keypass</signing.keypass>
         <signing.tsa>https://timestamp.digicert.com</signing.tsa>
 
-        <xnat.version>1.9.0</xnat.version>
+        <xnat.version>1.9.1-RC-SNAPSHOT</xnat.version>
 
         <!-- XNAT core library versions -->
         <xnat-web.version>${xnat.version}</xnat-web.version>
@@ -106,16 +106,17 @@
         <ml.version>1.0.0</ml.version>
         <datasets.version>1.0.0</datasets.version>
 
-        <spring-framework.version>5.3.31</spring-framework.version>
-        <spring-security.version>5.7.11</spring-security.version>
-        <spring-ldap.version>2.4.1</spring-ldap.version>
-        <spring-oauth2.version>2.5.0.RELEASE</spring-oauth2.version>
+        <spring-framework.version>5.3.39</spring-framework.version>
+        <spring-security.version>5.7.13</spring-security.version>
+        <spring-ldap.version>2.4.2</spring-ldap.version>
+        <spring-oauth2.version>2.5.2.RELEASE</spring-oauth2.version>
         <spring-jwt.version>1.1.1.RELEASE</spring-jwt.version>
+        <bouncycastle.version>1.78.1</bouncycastle.version>
 
         <swagger.version>2.9.2</swagger.version>
         <vladmihalcea-hibernate-types.version>2.14.0</vladmihalcea-hibernate-types.version>
 
-        <activemq.version>5.16.0</activemq.version>
+        <activemq.version>5.16.7</activemq.version>
         <activemq-protobuf.version>1.1</activemq-protobuf.version>
         <ant.version>1.9.8</ant.version>
         <antlr3.version>3.5.3</antlr3.version>
@@ -130,11 +131,11 @@
         <commons-beanutils.version>1.9.4</commons-beanutils.version>
         <commons-cli.version>1.4</commons-cli.version>
         <commons-codec.version>1.10</commons-codec.version>
-        <commons-compress.version>1.24.0</commons-compress.version>
+        <commons-compress.version>1.26.0</commons-compress.version>
         <commons-collections.version>3.2.2</commons-collections.version>
         <commons-collections4.version>4.4</commons-collections4.version>
         <commons-configuration.version>1.10</commons-configuration.version>
-        <commons-configuration2.version>2.1</commons-configuration2.version>
+        <commons-configuration2.version>2.10.1</commons-configuration2.version>
         <commons-csv.version>1.10.0</commons-csv.version>
         <commons-dbcp2.version>2.9.0</commons-dbcp2.version>
         <commons-digester.version>1.8.1</commons-digester.version>
@@ -157,7 +158,7 @@
         <dom4j.version>1.6.1</dom4j.version>
         <ecs.version>1.4.2</ecs.version>
         <ehcache3.version>3.10.8</ehcache3.version>
-        <redisson.version>3.20.1</redisson.version>
+        <redisson.version>3.22.0</redisson.version>
         <fastmd5.version>2.7.1</fastmd5.version>
         <fest-swing.version>1.2.1</fest-swing.version>
         <lorem.version>2.1</lorem.version>
@@ -166,7 +167,7 @@
         <guava.version>32.1.3-jre</guava.version>
         <gson.version>2.9.0</gson.version>
         <auto-value.version>1.7.4</auto-value.version>
-        <eclipse-jgit.version>4.5.4.201711221230-r</eclipse-jgit.version>
+        <eclipse-jgit.version>5.13.3.202401111512-r</eclipse-jgit.version>
 
         <org.postgresql.version>42.7.3</org.postgresql.version>
         <h2.version>1.4.200</h2.version>
@@ -247,7 +248,7 @@
         <saxon.version>9.1.0.8</saxon.version>
         <servlet-api.version>3.1.0</servlet-api.version>
         <slf4j.version>1.7.30</slf4j.version>
-        <logback.version>1.2.12</logback.version>
+        <logback.version>1.2.13</logback.version>
         <logstash.version>5.3</logstash.version>
         <javamelody.version>1.91.0</javamelody.version>
         <findbugs-jsr305.version>3.0.2</findbugs-jsr305.version>
@@ -271,7 +272,7 @@
         <gradle-cargo.version>2.8.0</gradle-cargo.version>
         <gradle-dependency-management.version>1.0.11.RELEASE</gradle-dependency-management.version>
         <gradle-lombok.version>5.0.0</gradle-lombok.version>
-        <tomcat-embed.version>9.0.54</tomcat-embed.version>
+        <tomcat-embed.version>9.0.93</tomcat-embed.version>
 
         <!-- Maven plugin versions -->
         <maven-assembly-plugin.version>3.6.0</maven-assembly-plugin.version>
@@ -656,6 +657,17 @@
                 <groupId>org.springframework.security</groupId>
                 <artifactId>spring-security-jwt</artifactId>
                 <version>${spring-jwt.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.bouncycastle</groupId>
+                        <artifactId>*</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.bouncycastle</groupId>
+                <artifactId>bcpkix-jdk18on</artifactId>
+                <version>${bouncycastle.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.springfox</groupId>
