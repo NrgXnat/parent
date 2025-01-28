@@ -238,7 +238,7 @@
         <mockito-jupiter.version>5.7.0</mockito-jupiter.version>
         <powermock.version>2.0.9</powermock.version>
         <easymock.version>1.2_Java1.3</easymock.version>
-        <wiremock.version>2.21.0</wiremock.version>
+        <wiremock.version>3.0.1</wiremock.version>
         <nifti_io.version>1.0</nifti_io.version>
         <org.apache.regexp.version>1.5.0</org.apache.regexp.version>
         <datasource-proxy.version>1.6</datasource-proxy.version>
