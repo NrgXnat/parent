@@ -170,7 +170,8 @@
         <eclipse-jgit.version>5.13.3.202401111512-r</eclipse-jgit.version>
 
         <org.postgresql.version>42.7.3</org.postgresql.version>
-        <h2.version>1.4.200</h2.version>
+        <!-- <h2.version>1.4.200</h2.version> -->
+        <h2.version>2.2.224</h2.version>
 
         <!-- Eventually upgrade to these versions. Staying with more moderate version in xnat_builder_1_7dev -->
         <hibernate.version>5.6.15.Final</hibernate.version>
