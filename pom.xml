@@ -121,7 +121,8 @@
         <ant.version>1.9.8</ant.version>
         <antlr3.version>3.5.3</antlr3.version>
         <antlr4.version>4.9.3</antlr4.version>
-        <hsqldb.version>2.3.6</hsqldb.version>
+        <!-- <hsqldb.version>2.3.6</hsqldb.version> -->
+        <hsqldb.version>2.7.4</hsqldb.version>
         <hikaricp.version>4.0.3</hikaricp.version>
         <aopalliance.version>1.0</aopalliance.version>
         <aspectj.version>1.8.10</aspectj.version>
@@ -155,7 +156,8 @@
         <pixelmed.version>nrg-20200327</pixelmed.version>
         <pixelmed-codec.version>20200328</pixelmed-codec.version>
         <pixelmed-imageio.version>20200328</pixelmed-imageio.version>
-        <dom4j.version>1.6.1</dom4j.version>
+        <!--        <dom4j.version>1.6.1</dom4j.version>-->
+        <dom4j.version>2.1.4</dom4j.version>
         <ecs.version>1.4.2</ecs.version>
         <ehcache3.version>3.10.8</ehcache3.version>
         <redisson.version>3.22.0</redisson.version>
@@ -867,7 +869,7 @@
                 <version>${user-agent-utils.version}</version>
             </dependency>
             <dependency>
-                <groupId>dom4j</groupId>
+                <groupId>org.dom4j</groupId>
                 <artifactId>dom4j</artifactId>
                 <version>${dom4j.version}</version>
                 <exclusions>
