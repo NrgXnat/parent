@@ -239,7 +239,7 @@
 <!--        <mockito-all.version>1.10.19</mockito-all.version> -->
         <mockito.version>5.7.0</mockito.version>
         <mockito-jupiter.version>5.7.0</mockito-jupiter.version>
-        <powermock.version>2.0.9</powermock.version>
+        <!-- <powermock.version>2.0.9</powermock.version> -->
         <easymock.version>1.2_Java1.3</easymock.version>
         <wiremock.version>3.0.1</wiremock.version>
         <nifti_io.version>1.0</nifti_io.version>
@@ -2100,19 +2100,19 @@
                 <version>${mockito-jupiter.version}</version>
                 <scope>test</scope>
             </dependency>
-            <dependency>
+            <!-- <dependency>
                 <groupId>org.powermock</groupId>
                 <artifactId>powermock-module-junit4</artifactId>
                 <version>${powermock.version}</version>
                 <scope>test</scope>
-            </dependency>
+            </dependency> -->
             <!-- Comes with mockito-core as per https://stackoverflow.com/questions/77234542/migration-from-java-8-to-java-17-and-spring-6-junit4-failing-due-to-version-mism -->
-            <dependency>
+            <!-- <dependency>
                 <groupId>org.powermock</groupId>
                 <artifactId>powermock-api-mockito2</artifactId>
                 <version>${powermock.version}</version>
                 <scope>test</scope>
-            </dependency>
+            </dependency> -->
             <dependency>
                 <groupId>easymock</groupId>
                 <artifactId>easymock</artifactId>
