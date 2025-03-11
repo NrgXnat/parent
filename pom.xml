@@ -120,7 +120,7 @@
         <activemq-protobuf.version>1.1</activemq-protobuf.version>
         <ant.version>1.9.8</ant.version>
         <antlr3.version>3.5.3</antlr3.version>
-        <antlr4.version>4.9.3</antlr4.version>
+        <antlr4.version>4.13.2</antlr4.version>
         <!-- <hsqldb.version>2.3.6</hsqldb.version> -->
         <hsqldb.version>2.7.4</hsqldb.version>
         <hikaricp.version>4.0.3</hikaricp.version>
