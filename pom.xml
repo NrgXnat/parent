@@ -172,7 +172,6 @@
         <eclipse-jgit.version>5.13.3.202401111512-r</eclipse-jgit.version>
 
         <org.postgresql.version>42.7.3</org.postgresql.version>
-        <!-- <h2.version>1.4.200</h2.version> -->
         <h2.version>2.2.224</h2.version>
 
         <!-- Eventually upgrade to these versions. Staying with more moderate version in xnat_builder_1_7dev -->
@@ -234,12 +233,8 @@
         <spotbugs.version>4.7.3.4</spotbugs.version>
         <jython.version>2.7.3</jython.version>
         <jzlib.version>1.1.3</jzlib.version>
-        <!-- <log4j.version>1.2.17</log4j.version> -->
-        <!-- <log4j2.version>2.12.0</log4j2.version> -->
-<!--        <mockito-all.version>1.10.19</mockito-all.version> -->
         <mockito.version>5.7.0</mockito.version>
         <mockito-jupiter.version>5.7.0</mockito-jupiter.version>
-        <!-- <powermock.version>2.0.9</powermock.version> -->
         <easymock.version>1.2_Java1.3</easymock.version>
         <wiremock.version>3.0.1</wiremock.version>
         <nifti_io.version>1.0</nifti_io.version>
@@ -276,7 +271,7 @@
         <gradle-cargo.version>2.8.0</gradle-cargo.version>
         <gradle-dependency-management.version>1.0.11.RELEASE</gradle-dependency-management.version>
         <gradle-lombok.version>5.0.0</gradle-lombok.version>
-        <tomcat-embed.version>11.0.0</tomcat-embed.version>
+        <tomcat-embed.version>9.0.93</tomcat-embed.version>
 
         <!-- Maven plugin versions -->
         <maven-assembly-plugin.version>3.6.0</maven-assembly-plugin.version>
@@ -1265,36 +1260,6 @@
                 <artifactId>java-getopt</artifactId>
                 <version>${java-getopt.version}</version>
             </dependency>
-            <!-- <dependency>
-                <groupId>log4j</groupId>
-                <artifactId>log4j</artifactId>
-                <version>${log4j.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>com.sun.jdmk</groupId>
-                        <artifactId>jmxtools</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>javax.jms</groupId>
-                        <artifactId>jms</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>javax.mail</groupId>
-                        <artifactId>mail</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>com.sun.jmx</groupId>
-                        <artifactId>jmxri</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.logging.log4j</groupId>
-                <artifactId>log4j-bom</artifactId>
-                <version>${log4j2.version}</version>
-                <scope>import</scope>
-                <type>pom</type>
-            </dependency> -->
             <dependency>
                 <groupId>net.bull.javamelody</groupId>
                 <artifactId>javamelody-core</artifactId>
@@ -2100,19 +2065,6 @@
                 <version>${mockito-jupiter.version}</version>
                 <scope>test</scope>
             </dependency>
-            <!-- <dependency>
-                <groupId>org.powermock</groupId>
-                <artifactId>powermock-module-junit4</artifactId>
-                <version>${powermock.version}</version>
-                <scope>test</scope>
-            </dependency> -->
-            <!-- Comes with mockito-core as per https://stackoverflow.com/questions/77234542/migration-from-java-8-to-java-17-and-spring-6-junit4-failing-due-to-version-mism -->
-            <!-- <dependency>
-                <groupId>org.powermock</groupId>
-                <artifactId>powermock-api-mockito2</artifactId>
-                <version>${powermock.version}</version>
-                <scope>test</scope>
-            </dependency> -->
             <dependency>
                 <groupId>easymock</groupId>
                 <artifactId>easymock</artifactId>
@@ -2286,14 +2238,6 @@
                             <goals>
                                 <goal>javadoc</goal>
                             </goals>
-                           <!-- <configuration>
-                                <doclet>com.manoelcampos.javadoc.coverage.CoverageDoclet</doclet>
-                                <docletArtifact>
-                                    <groupId>com.manoelcampos</groupId>
-                                    <artifactId>javadoc-coverage</artifactId>
-                                    <version>${javadoc-coverage.version}</version>
-                                </docletArtifact>
-                            </configuration> -->
                         </execution>
                     </executions>
                     <configuration>
@@ -2331,13 +2275,6 @@
                                 <goal>report-only</goal>
                             </goals>
                         </execution>
-                        <!-- execution>
-                            <id>report</id>
-                            <phase>prepare-package</phase>
-                            <goals>
-                                <goal>report</goal>
-                            </goals>
-                        </execution -->
                     </executions>
                 </plugin>
                 <plugin>
@@ -2495,23 +2432,23 @@
                         </execution>
                     </executions>
                 </plugin>
-                <plugin>
-                    <groupId>org.openrewrite.maven</groupId>
-                    <artifactId>rewrite-maven-plugin</artifactId>
-                    <version>5.41.0</version>
-                    <configuration>
-                        <activeRecipes>
-                            <recipe>org.openrewrite.java.migrate.UpgradeToJava21</recipe>
-                        </activeRecipes>
-                    </configuration>
-                    <dependencies>
-                        <dependency>
-                            <groupId>org.openrewrite.recipe</groupId>
-                            <artifactId>rewrite-spring</artifactId>
-                            <version>5.19.0</version>
-                        </dependency>
-                    </dependencies>
-                </plugin>
+<!--                <plugin>-->
+<!--                    <groupId>org.openrewrite.maven</groupId>-->
+<!--                    <artifactId>rewrite-maven-plugin</artifactId>-->
+<!--                    <version>5.41.0</version>-->
+<!--                    <configuration>-->
+<!--                        <activeRecipes>-->
+<!--                            <recipe>org.openrewrite.java.migrate.UpgradeToJava21</recipe>-->
+<!--                        </activeRecipes>-->
+<!--                    </configuration>-->
+<!--                    <dependencies>-->
+<!--                        <dependency>-->
+<!--                            <groupId>org.openrewrite.recipe</groupId>-->
+<!--                            <artifactId>rewrite-spring</artifactId>-->
+<!--                            <version>5.19.0</version>-->
+<!--                        </dependency>-->
+<!--                    </dependencies>-->
+<!--                </plugin>-->
             </plugins>
         </pluginManagement>
     </build>
