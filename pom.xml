@@ -252,6 +252,7 @@
         <javamelody.version>1.91.0</javamelody.version>
         <findbugs-jsr305.version>3.0.2</findbugs-jsr305.version>
         <metainf-services.version>1.8</metainf-services.version>
+        <testcontainers.version>1.19.1</testcontainers.version>
 
         <springockito.version>1.0.5</springockito.version>
         <torque.version>3.3</torque.version>
@@ -2117,6 +2118,24 @@
                 <groupId>org.mortbay.jetty</groupId>
                 <artifactId>jetty</artifactId>
                 <version>${jetty.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.testcontainers</groupId>
+                <artifactId>testcontainers</artifactId>
+                <version>${testcontainers.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.testcontainers</groupId>
+                <artifactId>junit-jupiter</artifactId>
+                <version>${testcontainers.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.testcontainers</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>${testcontainers.version}</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
