@@ -15,7 +15,7 @@
 
     <groupId>org.nrg</groupId>
     <artifactId>parent</artifactId>
-    <version>1.8.10.3-INTERNAL</version>
+    <version>1.8.10.4</version>
     <packaging>pom</packaging>
 
     <name>NRG Parent POM</name>
@@ -70,13 +70,14 @@
         <xnatfix1.version>1.8.10.1</xnatfix1.version>
         <xnatfix2.version>1.8.10.2-INTERNAL</xnatfix2.version>
         <xnatfix3.version>1.8.10.3-INTERNAL</xnatfix3.version>
-        <xnat-web.version>${xnatfix3.version}</xnat-web.version>
+        <xnatfix4.version>1.8.10.4</xnatfix4.version>
+        <xnat-web.version>${xnatfix4.version}</xnat-web.version>
         <xnat-tasks.version>${xnat.version}</xnat-tasks.version>
         <xnat-data-builder.version>${xnat.version}</xnat-data-builder.version>
-        <spawner.version>${xnat.version}</spawner.version>
-        <xnat-data-models.version>${xnatfix3.version}</xnat-data-models.version>
+        <spawner.version>${xnatfix4.version}</spawner.version>
+        <xnat-data-models.version>${xnatfix4.version}</xnat-data-models.version>
         <xdat-data-builder.version>${xnat.version}</xdat-data-builder.version>
-        <xdat.version>${xnat.version}</xdat.version>
+        <xdat.version>${xnatfix4.version}</xdat.version>
 
         <nrg.automation.version>${xnat.version}</nrg.automation.version>
         <nrg.config.version>${xnat.version}</nrg.config.version>
@@ -86,11 +87,11 @@
         <nrg.prefs.version>${xnat.version}</nrg.prefs.version>
         <nrg.test.version>${xnat.version}</nrg.test.version>
         <nrg.transaction.version>${xnat.version}</nrg.transaction.version>
-        <nrg.mizer.version>${xnatfix1.version}</nrg.mizer.version>
+        <nrg.mizer.version>${xnatfix4.version}</nrg.mizer.version>
         <nrg.dicomtools.version>${xnat.version}</nrg.dicomtools.version>
         <nrg.dicomimageutils.version>${xnat.version}</nrg.dicomimageutils.version>
         <nrg.dicom-edit4.version>${xnat.version}</nrg.dicom-edit4.version>
-        <nrg.dicom-edit6.version>6.6.1</nrg.dicom-edit6.version>
+        <nrg.dicom-edit6.version>6.7.2</nrg.dicom-edit6.version>
         <nrg.dicomdb.version>${xnat.version}</nrg.dicomdb.version>
         <nrg.dicom-xnat.version>${xnat.version}</nrg.dicom-xnat.version>
         <nrg.ecat4xnat.version>${xnat.version}</nrg.ecat4xnat.version>
