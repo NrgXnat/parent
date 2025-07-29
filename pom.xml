@@ -2466,18 +2466,12 @@
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>daily</updatePolicy>
-                <checksumPolicy>fail</checksumPolicy>
+                <checksumPolicy>warn</checksumPolicy>
             </releases>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
         </repository>
-        <repository>
-            <id>nrgxnat-ext-release-local</id>
-            <url>https://nrgxnat.jfrog.io/nrgxnat/ext-release-local/</url>
-            <releases><enabled>true</enabled></releases>
-            <snapshots><enabled>false</enabled></snapshots>
-        </repository>        
         <repository>
             <id>org.nrg.maven.artifacts.snapshot</id>
             <name>xnat snapshot maven repo</name>
