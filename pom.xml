@@ -74,14 +74,14 @@
         <spawner.version>${xnat.version}</spawner.version>
         <xnat-data-models.version>${xnat.version}</xnat-data-models.version>
         <xdat-data-builder.version>${xnat.version}</xdat-data-builder.version>
-        <xdat.version>${xnat.version}</xdat.version>
+        <xdat.version>${xnatfix.version}</xdat.version>
 
         <nrg.automation.version>${xnat.version}</nrg.automation.version>
         <nrg.config.version>${xnat.version}</nrg.config.version>
         <nrg.framework.version>${xnat.version}</nrg.framework.version>
         <nrg.mail.version>${xnat.version}</nrg.mail.version>
         <nrg.notify.version>${xnat.version}</nrg.notify.version>
-        <nrg.prefs.version>${xnat.version}</nrg.prefs.version>
+        <nrg.prefs.version>${xnatfix.version}</nrg.prefs.version>
         <nrg.test.version>${xnat.version}</nrg.test.version>
         <nrg.transaction.version>${xnat.version}</nrg.transaction.version>
         <nrg.mizer.version>${xnat.version}</nrg.mizer.version>
