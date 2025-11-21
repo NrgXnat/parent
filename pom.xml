@@ -15,7 +15,7 @@
 
     <groupId>org.nrg</groupId>
     <artifactId>parent</artifactId>
-    <version>1.9.3-RC-SNAPSHOT</version>
+    <version>1.9.3</version>
     <packaging>pom</packaging>
 
     <name>NRG Parent POM</name>
@@ -64,27 +64,27 @@
         <signing.keypass>keypass</signing.keypass>
         <signing.tsa>https://timestamp.digicert.com</signing.tsa>
 
-        <xnat.version>1.9.3-RC-SNAPSHOT</xnat.version>
+        <xnat.version>1.9.3</xnat.version>
 
         <!-- XNAT core library versions -->
-        <xnat-web.version>${xnatfix2.version}</xnat-web.version>
+        <xnat-web.version>${xnat.version}</xnat-web.version>
         <xnat-tasks.version>${xnat.version}</xnat-tasks.version>
         <xnat-data-builder.version>${xnat.version}</xnat-data-builder.version>
         <spawner.version>${xnat.version}</spawner.version>
         <xnat-data-models.version>${xnat.version}</xnat-data-models.version>
         <xdat-data-builder.version>${xnat.version}</xdat-data-builder.version>
-        <xdat.version>${xnatfix2.version}</xdat.version>
+        <xdat.version>${xnat.version}</xdat.version>
 
         <nrg.automation.version>${xnat.version}</nrg.automation.version>
         <nrg.config.version>${xnat.version}</nrg.config.version>
         <nrg.framework.version>${xnat.version}</nrg.framework.version>
         <nrg.mail.version>${xnat.version}</nrg.mail.version>
         <nrg.notify.version>${xnat.version}</nrg.notify.version>
-        <nrg.prefs.version>${xnatfix.version}</nrg.prefs.version>
+        <nrg.prefs.version>${xnat.version}</nrg.prefs.version>
         <nrg.test.version>${xnat.version}</nrg.test.version>
         <nrg.transaction.version>${xnat.version}</nrg.transaction.version>
         <nrg.mizer.version>${xnat.version}</nrg.mizer.version>
-        <nrg.dicomtools.version>${xnatfix.version}</nrg.dicomtools.version>
+        <nrg.dicomtools.version>${xnat.version}</nrg.dicomtools.version>
         <nrg.dicomimageutils.version>${xnat.version}</nrg.dicomimageutils.version>
         <nrg.dicom-edit4.version>${xnat.version}</nrg.dicom-edit4.version>
         <nrg.dicom-edit6.version>6.8.0-RC-SNAPSHOT</nrg.dicom-edit6.version>
