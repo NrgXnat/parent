@@ -292,7 +292,6 @@
         <copy-rename-maven-plugin.version>1.0.1</copy-rename-maven-plugin.version>
         <install4j-maven-plugin.version>1.1.2</install4j-maven-plugin.version>
         <jacoco-maven-plugin.version>0.8.12</jacoco-maven-plugin.version>
-        <javadoc-coverage.version>1.1.1</javadoc-coverage.version>
         <spotbugs-maven-plugin.version>4.5.3.0</spotbugs-maven-plugin.version>
         <graaljs.version>23.1.0</graaljs.version>
 
@@ -679,11 +678,6 @@
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger-ui</artifactId>
                 <version>${swagger.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.manoelcampos</groupId>
-                <artifactId>javadoc-coverage</artifactId>
-                <version>${javadoc-coverage.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.hibernate</groupId>
@@ -2249,19 +2243,9 @@
                                 <goal>javadoc</goal>
                             </goals>
                         </execution>
-
-                        <!-- Generates the JavaDoc coverage report -->
-                        <execution>
-                            <id>javadoc-coverage</id>
-                            <phase>package</phase>
-                            <goals>
-                                <goal>javadoc</goal>
-                            </goals>
-                        </execution>
                     </executions>
                     <configuration>
                         <quiet>true</quiet>
-                       <!-- <additionalOptions>-Xdoclint:none</additionalOptions> -->
                         <doclint>none</doclint>
                         <detectJavaApiLink>false</detectJavaApiLink>
                     </configuration>
