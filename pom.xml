@@ -2470,6 +2470,11 @@
             <name>dcm4che</name>
             <url>https://maven.dcm4che.org</url>
         </repository>
+	    <repository>
+	        <id>org.weasis</id>
+            <name>core</name>
+            <url>https://raw.githubusercontent.com/nroduit/mvn-repo/master/</url>
+        </repository>
     </repositories>
 
     <pluginRepositories>
