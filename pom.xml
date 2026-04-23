@@ -64,7 +64,7 @@
         <signing.keypass>keypass</signing.keypass>
         <signing.tsa>https://timestamp.digicert.com</signing.tsa>
 
-        <xnat.version>1.10.1-SNAPSHOT</xnat.version>
+        <xnat.version>1.10.0-RC4-SNAPSHOT</xnat.version>
 
         <!-- XNAT core library versions -->
         <xnat-web.version>${xnat.version}</xnat-web.version>
