@@ -15,7 +15,7 @@
 
     <groupId>org.nrg</groupId>
     <artifactId>parent</artifactId>
-    <version>1.9.3.5</version>
+    <version>1.9.3.6-RC-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>NRG Parent POM</name>
@@ -66,7 +66,6 @@
 
         <xnat.version>1.9.3</xnat.version>
         <xnatfix.version>1.9.3.3</xnatfix.version>
-        <xnatfix2.version>1.9.3.4</xnatfix2.version>
         <xnatfix3.version>1.9.3.5</xnatfix3.version>
 
         <!-- XNAT core library versions -->
@@ -92,7 +91,7 @@
         <nrg.dicom-edit4.version>${xnat.version}</nrg.dicom-edit4.version>
         <nrg.dicom-edit6.version>6.8.0</nrg.dicom-edit6.version>
         <nrg.dicomdb.version>${xnat.version}</nrg.dicomdb.version>
-        <nrg.dicom-xnat.version>${xnatfix2.version}</nrg.dicom-xnat.version>
+        <nrg.dicom-xnat.version>1.9.3.6-RC-SNAPSHOT</nrg.dicom-xnat.version>
         <nrg.ecat4xnat.version>${xnat.version}</nrg.ecat4xnat.version>
         <nrg.ecat.version>${xnat.version}</nrg.ecat.version>
         <nrg.extattr.version>${xnat.version}</nrg.extattr.version>
