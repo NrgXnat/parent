@@ -15,7 +15,7 @@
 
     <groupId>org.nrg</groupId>
     <artifactId>parent</artifactId>
-    <version>1.8.10.5</version>
+    <version>1.8.10.6</version>
     <packaging>pom</packaging>
 
     <name>NRG Parent POM</name>
@@ -72,13 +72,14 @@
         <xnatfix3.version>1.8.10.3-INTERNAL</xnatfix3.version>
         <xnatfix4.version>1.8.10.4</xnatfix4.version>
         <xnatfix5.version>1.8.10.5</xnatfix5.version>
-        <xnat-web.version>${xnatfix5.version}</xnat-web.version>
+        <xnatfix6.version>1.8.10.6</xnatfix6.version>
+        <xnat-web.version>${xnatfix6.version}</xnat-web.version>
         <xnat-tasks.version>${xnat.version}</xnat-tasks.version>
         <xnat-data-builder.version>${xnat.version}</xnat-data-builder.version>
         <spawner.version>${xnatfix4.version}</spawner.version>
         <xnat-data-models.version>${xnatfix4.version}</xnat-data-models.version>
         <xdat-data-builder.version>${xnat.version}</xdat-data-builder.version>
-        <xdat.version>${xnatfix4.version}</xdat.version>
+        <xdat.version>${xnatfix6.version}</xdat.version>
 
         <nrg.automation.version>${xnat.version}</nrg.automation.version>
         <nrg.config.version>${xnat.version}</nrg.config.version>
